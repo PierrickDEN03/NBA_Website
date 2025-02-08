@@ -1,0 +1,137 @@
+<!-- joueurs.tab.tpl.html, Appartient à la vue -->
+<!-- about us -->
+        <section id="about-us" class="clearfix">
+            <aside>
+
+                <h2>Critères de classement</h2>
+                <p>Afin de guider votre recherche sur les joueurs présents, des critères sont mis à votre disposition. Il est en effet possible de classer les joueurs en fonction de :
+                    <ul>
+                        <li>L'odre alphabétique</li>
+                        <li>La note moyenne</li>
+                        <li>Le nombre de likes</li>
+                        <li>Le nombre de bagues obtenues</li>
+                        <li>Le nombre d'années passées en NBA</li>
+                        <li>L'année de la Draft</li>
+                    </ul>
+                </p>
+
+                <h2>Formulaire pour classer</h2> 
+                
+                <form action="[onshow.cible]" method="POST" id="contactform">
+                    <fieldset>
+                            <input type="hidden" name="action" value="commenter"/><br>  
+                            <div>
+                                <label>Critères de classement :</label>
+                                <select name="classer">
+                                    <option selected=TRUE value=" "> </option>
+                                    <option value="nom">Nom de joueurs</option>
+                                    <option value="note">Note moyenne</option>
+                                    <option value="nblike">Nombre de likes</option>
+                                    <option value="nbbague">Nombre de bagues obtenues</option>
+                                    <option value="nbannee">Nombre d'années en NBA</option>
+                                    <option value="draft">Année de la draft</option>
+                                </select><br>
+                            </div>    
+                            <input type="submit" value="Classer" class="button"/>
+                            <input type="reset" value="Effacer" class="button"/>
+                    </fieldset>
+                </form><br>   
+    
+                <h2>A propos de nous</h2>
+            
+                <p>Créateurs du site : 
+                    <ul>
+                        <li>Eric Ballet : eric.ballet@univ-lyon2.fr</li>
+                        <li>Pierrick Dennemont : pierrick.dennemont@univ-lyon2.fr</li>
+                    </ul>
+                </p>
+
+                <h2>Liens</h2>
+
+
+                <ul class="link-list">
+                    <li><a rel="nofollow" href="inscription.php" >S'inscrire</a></li>
+                    <li><a rel="nofollow" href="index.html">Page de présentation</a></li>
+                    <li><a rel="nofollow" href="https://fr.wikipedia.org/wiki/Basket-ball">En savoir plus sur le basket</a></li>
+                </ul>
+
+                <h2>Informations complémentaires</h2>
+
+                <p>
+                    Ce site est crée dans le cadre d'un TD, pour l'université Lumière Lyon 2 et n'a aucune intention de plagiat ou autre.
+                    <blockquote>
+                        <p>On a avant tout choisit la NBA parce que le basket, c'est vraiment une activité qu'on a tous deux pratiqué et apprécié.</p>
+                        <cite>&mdash; Eric Ballet, Pierrick Dennemont</cite>
+                    </blockquote>
+                </p>
+            </aside>
+
+            <h1>Liste des joueurs</h1>
+
+            <div class="primary">
+                <p>
+                    Ci-dessous se trouve le tableau des joueurs ainsi que leurs caractéristiques respectives. A partir de ce tableau, plusieurs actions sont possibles : 
+                    <ul>
+                        <li>Commenter : Pour poster ou regarder les commentaires sur le joueur de votre choix, veuillez cliquer sur le nom du joueur concerné. Vous serez alors redirigé sur la page comprenant les commentaires</li>
+                        <li>Liker un joueur : cliquer sur le pouce correspondant. Si celui-ci est noir, cela signifie que vous avez déjà liké. Vous pouvez annulé votre choix en re-cliquant dessus. <strong>Attention ! </strong>Vous devez être connécté pour liker, sinon vous serez redirigé sur la page d'inscription.</li>
+                    </ul><br>
+                    Un formulaire est mis à votre disposition pour classer les joueurs en fonction du critère de votre choix.
+                </p><br><br>
+                <table>
+                    <caption>Liste des Joueurs</caption>
+                    <th>Nom - Prénom</th><th>Nombre de bagues</th><th>Année de la draft</th><th>Nombre d'années en NBA</th><th>Nombre de Likes</th><th>Note moyenne (sur 10)</th>
+                    <tr>
+                    <td><a href="joueurs.php?action=voir_com&id_joueur=[idjoueur.val;block=tr]">[nom.val;block=tr] [prenom.val;block=tr]</a></td>
+                    <td>[bague.val;block=tr]</td>
+                    <td>[draft.val;block=tr]</td>
+                    <td>[nbAnnee.val;block=tr]</td> 
+                    <td><a href="[onshow.cible]?action=[action.val;block=tr]&id_joueur=[idjoueur.val;block=tr]" title="Liker le joueur">
+                        <img alt="Photo de pouce" src="[photo.val;block=tr]" width="40" height="40" /></a>
+                        [nbLike.val;block=tr]
+                    </td>
+                    <td>[note.val;block=tr]</td>
+                    </tr>
+                </table> 
+            </div>
+            <a class="back-to-top" href="#main">Retour en haut</a>
+        </section>
+    </section>
+</div>
+
+<!-- footer -->
+<footer>
+    <div class="footer-content">
+        <ul class="footer-menu">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="inscription.php">Login</a></li>
+            <li><a href="joueurs.php">Joueurs</a></li>
+            <li><a href="https://fr.wikipedia.org/wiki/Basket-ball">A propos du basket</a></li>
+            <li><a href="">Contact : pierrick.dennemont@univ-lyon2.fr - eric.ballet@univ-lyon2.fr</a></li>
+            <!-- <li class="rss-feed"><a href="#">RSS Feed</a></li> -->
+        </ul>
+
+        <p class="footer-text">
+            &copy; 2024 Site NBA. &nbsp; &nbsp;  
+            CSS modifié par nous &nbsp; &nbsp;            
+        </p>
+
+    </div>
+
+</footer>
+
+<!-- scripts -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-1.6.1.min.js"><\/script>')</script>
+
+<script src="js/jquery.smoothscroll.js"></script>
+<script src="js/jquery.nivo.slider.pack.js"></script>
+<script src="js/jquery.easing-1.3.pack.js"></script>
+<script src="js/jquery.fancybox-1.3.4.pack.js"></script>
+<script src="js/init.js"></script>
+
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,107 @@
+<!-- modif_com.form.tpl.html, Appartient à la vue -->
+<!-- about us -->
+        <section id="about-us" class="clearfix">
+            <aside>
+
+                <h2>A propos de nous</h2>
+            
+                <p>Créateurs du site : 
+                    <ul>
+                        <li>Eric Ballet : eric.ballet@univ-lyon2.fr</li>
+                        <li>Pierrick Dennemont : pierrick.dennemont@univ-lyon2.fr</li>
+                    </ul>
+                </p>
+
+                <h2>Liens</h2>
+
+                <ul class="link-list">
+                    <li><a rel="nofollow" href="inscription.php" >S'inscrire</a></li>
+                    <li><a rel="nofollow" href="index.html">Page de présentation</a></li>
+                    <li><a rel="nofollow" href="https://fr.wikipedia.org/wiki/Basket-ball">En savoir plus sur le basket</a></li>
+                </ul>
+
+                <h2>Informations complémentaires</h2>
+
+                <p>
+                    Ce site est crée dans le cadre d'un TD, pour l'université Lumière Lyon 2 et n'a aucune intention de plagiat ou autre.
+                    <blockquote>
+                        <p>On a avant tout choisit la NBA parce que le basket, c'est vraiment une activité qu'on a tous deux pratiqué et apprécié.</p>
+                        <cite>&mdash; Eric Ballet, Pierrick Dennemont</cite>
+                    </blockquote>
+                </p>
+            </aside>
+            
+            <h1>Modification de votre commentaire</h1>
+            <section id="contact" class="clearfix">
+                <div class="primary">
+                    <p>
+                        Veuillez renseignez les champs à modifier : (Si vous êtes redirigé de nouveau sur cette page, cela signifie que l'ensemble des informations n'est pas saisies)
+                        <form action="[onshow.cible]" method="get" id="contactform">
+                            <fieldset>
+                                <legend>Formulaire de modification</legend>
+                                <input type="hidden" name="action" value="form_modif"/><br><br>
+                                <input type="hidden" name="id_joueur" value="[onshow.id]"/><br>       
+                            
+                                <div>
+                                    <label>Commentaire <span class="required">*</span></label>
+                                    <textarea name="commentaire">[onshow.texte]</textarea><br>
+                                </div>
+                            
+                                <div>
+                                    <label>Note <span class="required">*</span></label>
+                                    <input type="number" name="note" min="0" max="10" id="note" value="[onshow.note]"/><br>
+                                </div>
+                                <input type="submit" value="Envoyer" class="button"/>
+                                <input type="reset" value="Effacer" class="button"/>   
+                            </fieldset>
+                        </form>
+                        Si vous voulez supprimer votre commentaire, cliquez sur le lien suivant : <a href="[onshow.cible]?action=suppr_com&id_joueur=[onshow.id]">Supprimer</a>
+                    </p>
+                </div>
+            </section>
+            <a class="back-to-top" href="#main">Retour en haut</a>
+        </section>
+    </section>
+</div>
+
+<!-- footer -->
+<footer>
+    <div class="footer-content">
+        <ul class="footer-menu">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="inscription.php">Login</a></li>
+            <li><a href="joueurs.php">Joueurs</a></li>
+            <li><a href="https://fr.wikipedia.org/wiki/Basket-ball">A propos du basket</a></li>
+            <li><a href="">Contact : pierrick.dennemont@univ-lyon2.fr - eric.ballet@univ-lyon2.fr</a></li>
+            <!-- <li class="rss-feed"><a href="#">RSS Feed</a></li> -->
+        </ul>
+
+        <p class="footer-text">
+            &copy; 2024 Site NBA. &nbsp; &nbsp;  
+            CSS modifié par nous &nbsp; &nbsp;            
+        </p>
+
+    </div>
+
+</footer>
+
+<!-- scripts -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/jquery-1.6.1.min.js"><\/script>')</script>
+
+<script src="js/jquery.smoothscroll.js"></script>
+<script src="js/jquery.nivo.slider.pack.js"></script>
+<script src="js/jquery.easing-1.3.pack.js"></script>
+<script src="js/jquery.fancybox-1.3.4.pack.js"></script>
+<script src="js/init.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
